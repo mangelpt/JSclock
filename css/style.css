@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem=10px  10px/16px=62.5% */
+  background: #283c86; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #45a247,
+    #283c86
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #45a247,
+    #283c86
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed;
+}
+
+.clock {
+  width: 20rem;
+  height: 20rem;
+  background-color: #fff;
+  margin: 30vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.clock-face {
+  background-color: orange;
+  width: 87%;
+  height: 87%;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+
+  padding: 0.7rem;
+}
+
+.hand {
+  width: 50%;
+  height: 4px;
+  background: #000;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+}
+
+.second-hand {
+  height: 1.5px;
+}
+.min-hand {
+  height: 3px;
+}
